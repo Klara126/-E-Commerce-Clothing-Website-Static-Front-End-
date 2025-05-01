@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASHION - Modern Clothing Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">FASHION</a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i><span id="cart-count">0</span></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Spring Collection 2025</h1>
+                <p>Discover the latest trends in fashion</p>
+                <a href="products.html" class="btn">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Our most popular items this season</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/mens/white-tshirt.jpg" alt="Casual White T-Shirt">
+                        <div class="product-tags">
+                            <span class="tag new">New</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="1"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="quick-view" data-id="1"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Casual White T-Shirt</h3>
+                        <div class="product-price">$29.99</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/mens/black-jeans.jpg" alt="Slim Fit Jeans">
+                        <div class="product-tags">
+                            <span class="tag sale">Sale</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="2"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="quick-view" data-id="2"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Slim Fit Jeans</h3>
+                        <div class="product-price"><span class="original-price">$59.99</span> $39.99</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/womens/summer-dress.jpg" alt="Floral Summer Dress">
+                        <div class="product-tags">
+                            <span class="tag bestseller">Bestseller</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="3"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="quick-view" data-id="3"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Floral Summer Dress</h3>
+                        <div class="product-price">$49.99</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/mens/leather-jacket.jpg" alt="Leather Jacket">
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="4"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="quick-view" data-id="4"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Leather Jacket</h3>
+                        <div class="product-price">$89.99</div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="products.html" class="btn btn-outline">View All Products</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="section-title">
+                <h2>Shop by Category</h2>
+                <p>Find what you're looking for</p>
+            </div>
+            <div class="categories-grid">
+                <a href="products.html?category=mens" class="category-card">
+                    <img src="images/categories/mens-banner.jpg" alt="Men's Clothing">
+                    <div class="category-info">
+                        <h3>Men's</h3>
+                    </div>
+                </a>
+                <a href="products.html?category=womens" class="category-card">
+                    <img src="images/categories/womens-banner.jpg" alt="Women's Clothing">
+                    <div class="category-info">
+                        <h3>Women's</h3>
+                    </div>
+                </a>
+                <a href="products.html?category=kids" class="category-card">
+                    <img src="images/categories/kids-banner.jpg" alt="Kids' Clothing">
+                    <div class="category-info">
+                        <h3>Kids'</h3>
+                    </div>
+                </a>
+                <a href="products.html?category=accessories" class="category-card">
+                    <img src="images/categories/accessories-banner.jpg" alt="Accessories">
+                    <div class="category-info">
+                        <h3>Accessories</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Promotional Banner -->
+        <section class="promo-banner">
+            <div class="promo-content">
+                <h2>Summer Sale</h2>
+                <p>Up to 50% off on selected items</p>
+                <a href="products.html?sale=true" class="btn">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Join Our Newsletter</h2>
+                <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button class="btn">Subscribe</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>LUXE</h3>
+                <p>Your destination for modern fashion and style.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html?category=mens">Men's</a></li>
+                    <li><a href="products.html?category=womens">Women's</a></li>
+                    <li><a href="products.html?category=kids">Kids'</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?sale=true">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LUXE. All rights reserved.</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quick-view-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-quick-view">
+                <div class="product-quick-view-image">
+                    <img src="images/products/mens/white-tshirt.jpg" alt="Product Image">
+                </div>
+                <div class="product-quick-view-details">
+                    <h2 id="modal-product-title">Product Title</h2>
+                    <div class="product-price" id="modal-product-price">$0.00</div>
+                    <p class="product-description" id="modal-product-description">
+                        Product description will appear here.
+                    </p>
+                    <div class="product-options">
+                        <div class="size-options">
+                            <h4>Size:</h4>
+                            <div class="size-selector">
+                                <button class="size-btn">S</button>
+                                <button class="size-btn">M</button>
+                                <button class="size-btn">L</button>
+                                <button class="size-btn">XL</button>
+                            </div>
+                        </div>
+                        <div class="quantity-selector">
+                            <h4>Quantity:</h4>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn add-to-cart-btn" id="modal-add-to-cart">Add to Cart</button>
+                    <a href="products.html" class="btn btn-outline view-details-btn">View Full Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - FASHION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">FASHION</a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html" class="active">Categories</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i><span id="cart-count">0</span></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Shop by Category</h1>
+                <p>Browse our collections and find your perfect style</p>
+            </div>
+        </section>
+
+        <section class="categories-showcase">
+            <div class="container">
+                <div class="category-showcase-grid">
+                    <div class="category-showcase-item large">
+                        <img src="images\products\collections\mens.jpg" alt="Men's Collection">
+                        <div class="category-showcase-content">
+                            <h2>Men's Collection</h2>
+                            <p>Discover the latest trends in men's fashion</p>
+                            <a href="products.html?category=mens" class="btn">Shop Men's</a>
+                        </div>
+                    </div>
+                    <div class="category-showcase-item">
+                        <img src="images\products\collections\womens.jpg" alt="Women's Collection">
+                        <div class="category-showcase-content">
+                            <h2>Women's Collection</h2>
+                            <p>Elegant and stylish options for every occasion</p>
+                            <a href="products.html?category=womens" class="btn">Shop Women's</a>
+                        </div>
+                    </div>
+                    <div class="category-showcase-item">
+                        <img src="images\products\collections\kids.jpg" alt="Kids' Collection">
+                        <div class="category-showcase-content">
+                            <h2>Kids' Collection</h2>
+                            <p>Comfortable and fun clothing for children</p>
+                            <a href="products.html?category=kids" class="btn">Shop Kids'</a>
+                        </div>
+                    </div>
+                    <div class="category-showcase-item">
+                        <img src="images/products/accessories/bg.jpg"alt="Accessories Collection">
+                        <div class="category-showcase-content">
+                            <h2>Accessories</h2>
+                            <p>Complete your look with our stylish accessories</p>
+                            <a href="products.html?category=accessories" class="btn">Shop Accessories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subcategories">
+            <div class="container">
+                <h2>Men's Categories</h2>
+                <div class="subcategory-grid">
+                    <div class="subcategory-card">
+                        <img src="images\products\mens\mens shirts.jpg" alt="Men's Shirts">
+                        <h3>Shirts</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images\products\mens\mens pants.jpg" alt="Men's Pants">
+                        <h3>Pants</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images/products/mens/leather-jacket.jpg" alt="Men's Jackets">
+                        <h3>Jackets</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images\products\mens\mens shoes.jpg" alt="Men's Shoes">
+                        <h3>Shoes</h3>
+                    </div>
+                </div>
+
+                <h2>Women's Categories</h2>
+                <div class="subcategory-grid">
+                    <div class="subcategory-card">
+                        <img src="images/products/womens/summer-dress.jpg" alt="Women's Dresses">
+                        <h3>Dresses</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images/products/womens/blouse.jpg" alt="Women's Tops">
+                        <h3>Tops</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images\products\womens\skirt.jpg" alt="Women's Skirts">
+                        <h3>Bottoms</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images\products\womens\shoes women.jpg" alt="Women's Shoes">
+                        <h3>Shoes</h3>
+                    </div>
+                </div>
+
+                <h2>Kids' Categories</h2>
+                <div class="subcategory-grid">
+                    <div class="subcategory-card">
+                        <img src="images/products/kids/tshirt.jpg" alt="Boys' Clothing">
+                        <h3>Boys</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images/products/kids/dress.jpg" alt="Girls' Clothing">
+                        <h3>Girls</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images\products\kids\baby.jpg" alt="Baby Clothing">
+                        <h3>Baby</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images\products\kids\kids shoes.jpg" alt="Kids' Shoes">
+                        <h3>Shoes</h3>
+                    </div>
+                </div>
+
+                <h2>Accessories</h2>
+                <div class="subcategory-grid">
+                    <div class="subcategory-card">
+                        <img src="images/products/accessories/bag.jpg" alt="Bags">
+                        <h3>Bags</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images/products/accessories/jewelry.jpg" alt="Jewelry">
+                        <h3>Jewelry</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images/products/accessories/sunglasses.jpg" alt="Sunglasses">
+                        <h3>Sunglasses</h3>
+                    </div>
+                    <div class="subcategory-card">
+                        <img src="images/products/accessories/watch.jpg" alt="Watches">
+                        <h3>Watches</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>LUXE</h3>
+                <p>Your destination for modern fashion and style.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html?category=mens">Men's</a></li>
+                    <li><a href="products.html?category=womens">Women's</a></li>
+                    <li><a href="products.html?category=kids">Kids'</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?sale=true">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LUXE. All rights reserved.</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

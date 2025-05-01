@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All - FASHION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">FASHION</a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="products.html" class="active">Shop All</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i><span id="cart-count">0</span></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 id="product-page-title">Shop All Products</h1>
+                <p id="product-page-description">Browse our collection of high-quality clothing and accessories</p>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <div class="products-layout">
+                    <div class="filter-sidebar">
+                        <div class="filter-header">
+                            <h3>Filters</h3>
+                            <button id="clear-filters">Clear All</button>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Categories</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="mens">
+                                    <span>Men's</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="womens">
+                                    <span>Women's</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="kids">
+                                    <span>Kids'</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="accessories">
+                                    <span>Accessories</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <div class="price-range">
+                                <div class="price-inputs">
+                                    <input type="number" id="min-price" placeholder="Min" min="0">
+                                    <span>to</span>
+                                    <input type="number" id="max-price" placeholder="Max" min="0">
+                                </div>
+                                <button id="apply-price">Apply</button>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Size</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="size" value="xs">
+                                    <span>XS</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="size" value="s">
+                                    <span>S</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="size" value="m">
+                                    <span>M</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="size" value="l">
+                                    <span>L</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="size" value="xl">
+                                    <span>XL</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="size" value="xxl">
+                                    <span>XXL</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Color</h4>
+                            <div class="color-options">
+                                <label class="color-option">
+                                    <input type="checkbox" name="color" value="black">
+                                    <span class="color-circle" style="background-color: #000;"></span>
+                                    <span>Black</span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="checkbox" name="color" value="white">
+                                    <span class="color-circle" style="background-color: #fff; border: 1px solid #ddd;"></span>
+                                    <span>White</span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="checkbox" name="color" value="red">
+                                    <span class="color-circle" style="background-color: #e74c3c;"></span>
+                                    <span>Red</span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="checkbox" name="color" value="blue">
+                                    <span class="color-circle" style="background-color: #3498db;"></span>
+                                    <span>Blue</span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="checkbox" name="color" value="green">
+                                    <span class="color-circle" style="background-color: #2ecc71;"></span>
+                                    <span>Green</span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="checkbox" name="color" value="yellow">
+                                    <span class="color-circle" style="background-color: #f1c40f;"></span>
+                                    <span>Yellow</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>On Sale</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="sale" value="true">
+                                    <span>Sale Items</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="products-container">
+                        <div class="products-header">
+                            <div class="products-count">
+                                <span id="product-count">24</span> products
+                            </div>
+                            <div class="products-sort">
+                                <label for="sort-by">Sort by:</label>
+                                <select id="sort-by">
+                                    <option value="featured">Featured</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="newest">Newest</option>
+                                    <option value="bestselling">Best Selling</option>
+                                </select>
+                            </div>
+                            <div class="view-options">
+                                <button class="view-option active" data-view="grid"><i class="fas fa-th"></i></button>
+                                <button class="view-option" data-view="list"><i class="fas fa-list"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-grid" id="product-grid">
+                            <!-- Men's Products -->
+                            <div class="product-card" data-category="mens" data-price="29.99" data-color="white">
+                                <div class="product-image">
+                                    <img src="images/products/mens/white-tshirt.jpg" alt="Men's White T-Shirt">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="m1"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="m1"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Classic White T-Shirt</h3>
+                                    <div class="product-price">$29.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="mens" data-price="49.99" data-color="blue">
+                                <div class="product-image">
+                                    <img src="images/products/mens/blue-shirt.jpg" alt="Men's Blue Shirt">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="m2"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="m2"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Casual Blue Shirt</h3>
+                                    <div class="product-price">$49.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="mens" data-price="39.99" data-color="black" data-sale="true">
+                                <div class="product-image">
+                                    <img src="images/products/mens/black-jeans.jpg" alt="Men's Black Jeans">
+                                    <div class="product-tags">
+                                        <span class="tag sale">Sale</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="m3"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="m3"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Slim Fit Black Jeans</h3>
+                                    <div class="product-price"><span class="original-price">$59.99</span> $39.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="mens" data-price="89.99" data-color="brown">
+                                <div class="product-image">
+                                    <img src="images/products/mens/leather-jacket.jpg" alt="Men's Brown Leather Jacket">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="m4"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="m4"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Brown Leather Jacket</h3>
+                                    <div class="product-price">$89.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="mens" data-price="34.99" data-color="green">
+                                <div class="product-image">
+                                    <img src="images\products\mens\green polo.jpg" alt="Men's Green Polo Shirt">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="m5"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="m5"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Green Polo Shirt</h3>
+                                    <div class="product-price">$34.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="mens" data-price="44.99" data-color="red">
+                                <div class="product-image">
+                                    <img src="images\products\mens\red sweater.jpg" alt="Men's Red Sweater">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="m6"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="m6"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Red Knit Sweater</h3>
+                                    <div class="product-price">$44.99</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Women's Products -->
+                            <div class="product-card" data-category="womens" data-price="49.99" data-color="blue">
+                                <div class="product-image">
+                                    <img src="images\products\womens\blue dress.jpg" alt="Women Blue Dress">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="w1"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="w1"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Floral Summer Dress</h3>
+                                    <div class="product-price">$49.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="womens" data-price="29.99" data-color="white">
+                                <div class="product-image">
+                                    <img src="images\products\womens\white blouse.jpg" alt="Women's White Blouse">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="w2"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="w2"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Elegant White Blouse</h3>
+                                    <div class="product-price">$29.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="womens" data-price="59.99" data-color="black">
+                                <div class="product-image">
+                                    <img src="images\products\womens\black skirt.jpg" alt="Women's Black Skirt">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="w3"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="w3"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>A-Line Black Skirt</h3>
+                                    <div class="product-price">$59.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="womens" data-price="39.99" data-color="red" data-sale="true">
+                                <div class="product-image">
+                                    <img src="images\products\womens\red v neck.jpg" alt="Women's Red Top">
+                                    <div class="product-tags">
+                                        <span class="tag sale">Sale</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="w4"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="w4"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Red V-Neck Top</h3>
+                                    <div class="product-price"><span class="original-price">$49.99</span> $39.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="womens" data-price="79.99" data-color="green">
+                                <div class="product-image">
+                                    <img src="images\products\womens\green jacket.jpg" alt="Women's Green Jacket">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="w5"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="w5"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Green Utility Jacket</h3>
+                                    <div class="product-price">$79.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="womens" data-price="69.99" data-color="blue">
+                                <div class="product-image">
+                                    <img src="images\products\womens\jeans.jpg" alt="Women's Blue Jeans">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="w6"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="w6"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>High-Waisted Jeans</h3>
+                                    <div class="product-price">$69.99</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Kids' Products -->
+                            <div class="product-card" data-category="kids" data-price="24.99" data-color="blue">
+                                <div class="product-image">
+                                    <img src="images\products\kids\blue tshirt.jpg" alt="Kids' Blue T-Shirt">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="k1"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="k1"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Kids' Blue T-Shirt</h3>
+                                    <div class="product-price">$24.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="kids" data-price="34.99" data-color="red">
+                                <div class="product-image">
+                                    <img src="images\products\kids\red hoodie.jpg" alt="Kids' Red Hoodie">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="k2"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="k2"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Kids' Red Hoodie</h3>
+                                    <div class="product-price">$34.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="kids" data-price="29.99" data-color="yellow" data-sale="true">
+                                <div class="product-image">
+                                    <img src="images\products\kids\yellow dress.jpg" alt="Kids' Yellow Dress">
+                                    <div class="product-tags">
+                                        <span class="tag sale">Sale</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="k3"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="k3"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Kids' Yellow Dress</h3>
+                                    <div class="product-price"><span class="original-price">$39.99</span> $29.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="kids" data-price="19.99" data-color="green">
+                                <div class="product-image">
+                                    <img src="images\products\kids\green shorts.jpg" alt="Kids' Green Shorts">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="k4"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="k4"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Kids' Green Shorts</h3>
+                                    <div class="product-price">$19.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="kids" data-price="44.99" data-color="black">
+                                <div class="product-image">
+                                    <img src="images\products\kids\black jacket.jpg" alt="Kids' Black Jacket">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="k5"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="k5"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Kids' Black Jacket</h3>
+                                    <div class="product-price">$44.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="kids" data-price="22.99" data-color="white">
+                                <div class="product-image">
+                                    <img src="images\products\kids\white sneaker.jpg" alt="Kids' White Sneakers">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="k6"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="k6"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Kids' White Sneakers</h3>
+                                    <div class="product-price">$22.99</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Accessories -->
+                            <div class="product-card" data-category="accessories" data-price="19.99" data-color="black">
+                                <div class="product-image">
+                                    <img src="images\products\accessories\black belt.jpg" alt="Black Leather Belt">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="a1"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="a1"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Black Leather Belt</h3>
+                                    <div class="product-price">$19.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="accessories" data-price="29.99" data-color="brown">
+                                <div class="product-image">
+                                    <img src="images\products\accessories\brown wallet.jpg" alt="Brown Leather Wallet">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="a2"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="a2"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Brown Leather Wallet</h3>
+                                    <div class="product-price">$29.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="accessories" data-price="24.99" data-color="blue" data-sale="true">
+                                <div class="product-image">
+                                    <img src="images\products\accessories\blue scarf.jpg" alt="Blue Scarf">
+                                    <div class="product-tags">
+                                        <span class="tag sale">Sale</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="a3"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="a3"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Blue Patterned Scarf</h3>
+                                    <div class="product-price"><span class="original-price">$34.99</span> $24.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="accessories" data-price="59.99" data-color="black">
+                                <div class="product-image">
+                                    <img src="images\products\accessories\ddesigner glasses.jpg" alt="Black Sunglasses">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="a4"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="a4"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Designer Sunglasses</h3>
+                                    <div class="product-price">$59.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="accessories" data-price="39.99" data-color="red">
+                                <div class="product-image">
+                                    <img src="images\products\accessories\red bag.jpg" alt="Red Handbag">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="a5"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="a5"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Red Crossbody Bag</h3>
+                                    <div class="product-price">$39.99</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-card" data-category="accessories" data-price="14.99" data-color="silver">
+                                <div class="product-image">
+                                    <img src="images\products\accessories\silver.jpg" alt="Silver Necklace">
+                                    <div class="product-actions">
+                                        <button class="add-to-cart" data-id="a6"><i class="fas fa-shopping-bag"></i></button>
+                                        <button class="quick-view" data-id="a6"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Silver Pendant Necklace</h3>
+                                    <div class="product-price">$14.99</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pagination">
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>LUXE</h3>
+                <p>Your destination for modern fashion and style.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html?category=mens">Men's</a></li>
+                    <li><a href="products.html?category=womens">Women's</a></li>
+                    <li><a href="products.html?category=kids">Kids'</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?sale=true">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LUXE. All rights reserved.</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quick-view-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-quick-view">
+                <div class="product-quick-view-image">
+                    <img src="images/products/mens/white-tshirt.jpg" alt="Product Image">
+                </div>
+                <div class="product-quick-view-details">
+                    <h2 id="modal-product-title">Product Title</h2>
+                    <div class="product-price" id="modal-product-price">$0.00</div>
+                    <p class="product-description" id="modal-product-description">
+                        Product description will appear here.
+                    </p>
+                    <div class="product-options">
+                        <div class="size-options">
+                            <h4>Size:</h4>
+                            <div class="size-selector">
+                                <button class="size-btn">S</button>
+                                <button class="size-btn">M</button>
+                                <button class="size-btn">L</button>
+                                <button class="size-btn">XL</button>
+                            </div>
+                        </div>
+                        <div class="quantity-selector">
+                            <h4>Quantity:</h4>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn add-to-cart-btn" id="modal-add-to-cart">Add to Cart</button>
+                    <a href="products.html" class="btn btn-outline view-details-btn">View Full Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

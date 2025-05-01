@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - FASHION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">FASHION</a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="cart.html" class="active">Cart</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="active"><i class="fas fa-shopping-bag"></i><span id="cart-count">0</span></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                <p>Review and modify your items before checkout</p>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <div class="container">
+                <div id="empty-cart" class="empty-cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h2>Your cart is empty</h2>
+                    <p>Looks like you haven't added any items to your cart yet.</p>
+                    <a href="products.html" class="btn">Continue Shopping</a>
+                </div>
+
+                <div id="cart-content" class="cart-content">
+                    <div class="cart-items">
+                        <div class="cart-header">
+                            <div class="cart-header-product">Product</div>
+                            <div class="cart-header-price">Price</div>
+                            <div class="cart-header-quantity">Quantity</div>
+                            <div class="cart-header-total">Total</div>
+                            <div class="cart-header-actions"></div>
+                        </div>
+                        
+                        <div class="cart-item" data-id="m1">
+                            <div class="cart-item-product">
+                                <img src="images/products/mens/white-tshirt.jpg" alt="Classic White T-Shirt">
+                                <div class="cart-item-details">
+                                    <h3>Classic White T-Shirt</h3>
+                                    <p>Size: M | Color: White</p>
+                                </div>
+                            </div>
+                            <div class="cart-item-price">$29.99</div>
+                            <div class="cart-item-quantity">
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn minus">-</button>
+                                    <input type="number" value="1" min="1" max="10">
+                                    <button class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            <div class="cart-item-total">$29.99</div>
+                            <div class="cart-item-actions">
+                                <button class="remove-item"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-item" data-id="w1">
+                            <div class="cart-item-product">
+                                <img src="images/products/womens/summer-dress.jpg" alt="Floral Summer Dress">
+                                <div class="cart-item-details">
+                                    <h3>Floral Summer Dress</h3>
+                                    <p>Size: S | Color: Blue</p>
+                                </div>
+                            </div>
+                            <div class="cart-item-price">$49.99</div>
+                            <div class="cart-item-quantity">
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn minus">-</button>
+                                    <input type="number" value="1" min="1" max="10">
+                                    <button class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            <div class="cart-item-total">$49.99</div>
+                            <div class="cart-item-actions">
+                                <button class="remove-item"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <div class="cart-promo">
+                            <h3>Promo Code</h3>
+                            <div class="promo-input">
+                                <input type="text" placeholder="Enter promo code">
+                                <button class="btn btn-outline">Apply</button>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-totals">
+                            <h3>Order Summary</h3>
+                            <div class="cart-total-row">
+                                <span>Subtotal</span>
+                                <span id="cart-subtotal">$79.98</span>
+                            </div>
+                            <div class="cart-total-row">
+                                <span>Shipping</span>
+                                <span id="cart-shipping">$5.99</span>
+                            </div>
+                            <div class="cart-total-row">
+                                <span>Tax</span>
+                                <span id="cart-tax">$8.60</span>
+                            </div>
+                            <div class="cart-total-row total">
+                                <span>Total</span>
+                                <span id="cart-total">$94.57</span>
+                            </div>
+                            <a href="checkout.html" class="btn btn-full">Proceed to Checkout</a>
+                            <a href="products.html" class="continue-shopping">Continue Shopping</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="recommended-products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>You May Also Like</h2>
+                    <p>Based on your selections</p>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images\recomended-products\blue-denim-jacket.jpg" alt="Blue Denim Jacket">
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="r1"><i class="fas fa-shopping-bag"></i></button>
+                                <button class="quick-view" data-id="r1"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Blue Denim Jacket</h3>
+                            <div class="product-price">$69.99</div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images\products\mens\stribbed-polo.jpg" alt="Striped Polo Shirt">
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="r2"><i class="fas fa-shopping-bag"></i></button>
+                                <button class="quick-view" data-id="r2"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Striped Polo Shirt</h3>
+                            <div class="product-price">$34.99</div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images\products\accessories\leather-watch.jpg" alt="Leather Watch">
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="r4"><i class="fas fa-shopping-bag"></i></button>
+                                <button class="quick-view" data-id="r4"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Leather Watch</h3>
+                            <div class="product-price">$89.99</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>LUXE</h3>
+                <p>Your destination for modern fashion and style.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html?category=mens">Men's</a></li>
+                    <li><a href="products.html?category=womens">Women's</a></li>
+                    <li><a href="products.html?category=kids">Kids'</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?sale=true">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LUXE. All rights reserved.</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

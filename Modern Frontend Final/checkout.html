@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - FASHION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">FASHION</a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i><span id="cart-count">0</span></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Checkout</h1>
+                <p>Complete your purchase</p>
+            </div>
+        </section>
+
+        <section class="checkout-section">
+            <div class="container">
+                <div class="checkout-progress">
+                    <div class="progress-step active">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Shipping</div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Payment</div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Review</div>
+                    </div>
+                </div>
+                
+                <div class="checkout-content">
+                    <div class="checkout-form">
+                        <div class="checkout-step active" id="shipping-step">
+                            <h2>Shipping Information</h2>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="Your email address">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" placeholder="Your first name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" placeholder="Your last name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" placeholder="Street address">
+                            </div>
+                            <div class="form-group">
+                                <label for="address2">Apartment, suite, etc. (optional)</label>
+                                <input type="text" id="address2" placeholder="Apartment, suite, etc.">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" placeholder="City">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State/Province</label>
+                                    <select id="state">
+                                        <option value="">Select State</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <!-- More states would be listed here -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">Zip/Postal Code</label>
+                                    <input type="text" id="zip" placeholder="Zip code">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country">
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <!-- More countries would be listed here -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="Your phone number">
+                            </div>
+                            <div class="form-options">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="save-info">
+                                    <label for="save-info">Save this information for next time</label>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <a href="cart.html" class="btn btn-outline">Return to Cart</a>
+                                <button class="btn btn-full next-step" data-next="payment-step">Continue to Payment</button>
+                            </div>
+                        </div>
+                        
+                        <div class="checkout-step" id="payment-step">
+                            <h2>Payment Method</h2>
+                            <div class="payment-options">
+                                <div class="payment-option">
+                                    <input type="radio" name="payment-method" id="credit-card" checked>
+                                    <label for="credit-card">
+                                        <span class="payment-icon"><i class="far fa-credit-card"></i></span>
+                                        <span>Credit Card</span>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="payment-method" id="paypal">
+                                    <label for="paypal">
+                                        <span class="payment-icon"><i class="fab fa-paypal"></i></span>
+                                        <span>PayPal</span>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="payment-method" id="apple-pay">
+                                    <label for="apple-pay">
+                                        <span class="payment-icon"><i class="fab fa-apple-pay"></i></span>
+                                        <span>Apple Pay</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="credit-card-form">
+                                <div class="form-group">
+                                    <label for="card-number">Card Number</label>
+                                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="card-name">Name on Card</label>
+                                        <input type="text" id="card-name" placeholder="John Doe">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry">Expiration Date</label>
+                                        <input type="text" id="expiry" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" placeholder="123">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button class="btn btn-outline prev-step" data-prev="shipping-step">Back to Shipping</button>
+                                <button class="btn btn-full next-step" data-next="review-step">Review Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="checkout-step" id="review-step">
+                            <h2>Review Your Order</h2>
+                            <div class="review-section">
+                                <h3>Shipping Information</h3>
+                                <div class="review-info" id="review-shipping">
+                                    <p>John Doe</p>
+                                    <p>123 Main Street, Apt 4B</p>
+                                    <p>New York, NY 10001</p>
+                                    <p>United States</p>
+                                    <p>john.doe@example.com</p>
+                                    <p>(555) 123-4567</p>
+                                </div>
+                                <button class="edit-btn" data-step="shipping-step">Edit</button>
+                            </div>
+                            
+                            <div class="review-section">
+                                <h3>Payment Method</h3>
+                                <div class="review-info" id="review-payment">
+                                    <p>Credit Card ending in 3456</p>
+                                    <p>Expiration: 12/25</p>
+                                </div>
+                                <button class="edit-btn" data-step="payment-step">Edit</button>
+                            </div>
+                            
+                            <div class="review-section">
+                                <h3>Order Items</h3>
+                                <div class="review-items">
+                                    <div class="review-item">
+                                        <div class="order-item-image">
+                                            <img src="images/products/mens/white-tshirt.jpg" alt="Classic White T-Shirt">
+                                        </div>
+                                        <div class="review-item-details">
+                                            <h4>Classic White T-Shirt</h4>
+                                            <p>Size: M | Color: White</p>
+                                            <p>Quantity: 1</p>
+                                        </div>
+                                        <div class="review-item-price">$29.99</div>
+                                    </div>
+                                    <div class="review-item">
+                                        <div class="order-item-image">
+                                            <img src="images/products/womens/summer-dress.jpg" alt="Floral Summer Dress">
+                                        </div>
+                                        <div class="review-item-details">
+                                            <h4>Floral Summer Dress</h4>
+                                            <p>Size: S | Color: Blue</p>
+                                            <p>Quantity: 1</p>
+                                        </div>
+                                        <div class="review-item-price">$49.99</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-options">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="terms">
+                                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button class="btn btn-outline prev-step" data-prev="payment-step">Back to Payment</button>
+                                <button class="btn btn-full" id="place-order">Place Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="order-item-image">
+                                    <img src="images/products/mens/white-tshirt.jpg" alt="Classic White T-Shirt">
+                                </div>
+                                <div class="order-item-details">
+                                    <h4>Classic White T-Shirt</h4>
+                                    <p>Size: M | Qty: 1</p>
+                                </div>
+                                <div class="order-item-price">$29.99</div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-item-image">
+                                    <img src="images/products/womens/summer-dress.jpg" alt="Floral Summer Dress">
+                                </div>
+                                <div class="order-item-details">
+                                    <h4>Floral Summer Dress</h4>
+                                    <p>Size: S | Qty: 1</p>
+                                </div>
+                                <div class="order-item-price">$49.99</div>
+                            </div>
+                        </div>
+                        <div class="order-totals">
+                            <div class="order-total-row">
+                                <span>Subtotal</span>
+                                <span>$79.98</span>
+                            </div>
+                            <div class="order-total-row">
+                                <span>Shipping</span>
+                                <span>$5.99</span>
+                            </div>
+                            <div class="order-total-row">
+                                <span>Tax</span>
+                                <span>$8.60</span>
+                            </div>
+                            <div class="order-total-row total">
+                                <span>Total</span>
+                                <span>$94.57</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>LUXE</h3>
+                <p>Your destination for modern fashion and style.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html?category=mens">Men's</a></li>
+                    <li><a href="products.html?category=womens">Women's</a></li>
+                    <li><a href="products.html?category=kids">Kids'</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?sale=true">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LUXE. All rights reserved.</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
